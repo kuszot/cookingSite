@@ -10,6 +10,11 @@ export default {
         'black': "#333333",
         'gray': "#F0F0F0",
       },
+      fontFamily: {
+        oswald: 'Oswald, sans-serif',
+        roboto: 'Roboto, sans-serif',
+        noto: 'Noto Serif, serif',
+      },
     },
   },
   plugins: [],
