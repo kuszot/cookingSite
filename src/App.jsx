@@ -1,4 +1,5 @@
 import {twittericon,instagram,facebook} from './assets/icons'
+import CookingWithFamilySection from './CookingWithFamilySection'
 import RandomMeal from './RandomMeal'
 
 const App = () => (
@@ -21,6 +22,9 @@ const App = () => (
         </header>
         <section className='pl-9 pr-9'>
             <RandomMeal/>
+        </section>
+        <section className='pl-9 pr-9 mt-36'>
+            <CookingWithFamilySection/>
         </section>
     </main>
 )
