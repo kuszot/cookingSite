@@ -1,10 +1,11 @@
 import fetchRandomMeal from './fetchRandomMeal';
 
 
-async function generateRandomMeal() {
+async function generateRandomMeal(id=0) {
     try{
-      const { recipe } = await fetchRandomMeal();
-      return {title: recipe.label, image: recipe.image, url: recipe.uri};
+      const response = await fetchRandomMeal();
+      const { recipe } = response[id];
+      return recipe;
     } catch (error) {
         console.error('Error generating random meal' + error);
         return null;
