@@ -34,6 +34,9 @@ const App = () => (
                 <MealCard id={3} />
             </div>
         </section>
+        <footer className="flex p-8 justify-center items-center border-t mt-28">
+            <p className="font-roboto">&copy; 2023 EdibleEasel</p>
+        </footer>
     </main>
 )
 export default App
