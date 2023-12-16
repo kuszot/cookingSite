@@ -6,7 +6,7 @@ async function fetchRandomMeal() {
   if(!response.ok) {
     throw new Error(`fetchRandomMeal not okay`);
   }
-  return (await response.json()).hits[0];
+  return (await response.json()).hits;
 
 }
 
