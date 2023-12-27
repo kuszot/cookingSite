@@ -33,7 +33,7 @@ const App = () => {
                 <nav className='flex flex-row justify-between items-center'>
                     <Link className="font-bold" to="/"><h1>EdibleEasel<span className="text-[#9E1515]">.</span></h1></Link>
                     <ul className='flex gap-5'>
-                        <Link to='/home' className='cursor-pointer hover:font-black'>Home</Link>
+                        <Link to='/' className='cursor-pointer hover:font-black'>Home</Link>
                         <li className='cursor-pointer hover:font-black '>Recipes</li>
                         <li className='cursor-pointer hover:font-black'>Contact</li>
                         <li className='cursor-pointer hover:font-black'>About us</li>
