@@ -1,29 +1,7 @@
-import { useEffect, useState } from 'react';
 import { rightArrow } from './assets/icons';
-import generateRandomMeal from './generateRandomMeal';
 
-const RandomMeal = () => {
-    const [mealData, setMealData] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-        try {
-            const { label, image, url } = await generateRandomMeal();
-            setMealData({ label, image, url });
-        } catch (error) {
-            console.error('Error fetching random meal', error);
-        }
-        };
-
-        fetchData();
-    }, []); // Empty dependency array ensures this effect runs once on component mount
-
-    if (!mealData) {
-        // Optional: Add a loading state or handle the absence of data
-        return <p>Loading...</p>;
-    }
-
-    const { label, image} = mealData;
+const RandomMeal = ({mealData}) => {
+    const {label,img} = mealData;
     return (
         <section className='flex my-16 max-container max-h-[40rem]'>
             <div className='flex flex-1'>
@@ -37,7 +15,7 @@ const RandomMeal = () => {
                     </div>
                 </div>
                 <div className='flex-1'>
-                    <img className='w-full h-full' src={image} alt="burger"/>
+                    <img className='w-full h-full' src={img} alt="burger"/>
                 </div>
             </div>
         </section>
