@@ -5,6 +5,7 @@ import MealCard from './MealCard'
 import {Route, Routes,Link} from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import generateRandomMeal from './generateRandomMeal';
+import FilterBarContainer from './FilterBarContainer'
 
 const App = () => {
     const [mealData, setMealData] = useState(null);
@@ -28,7 +29,7 @@ const App = () => {
     }
 
     return (
-        <main className="relative text-black">
+        <main className="flex flex-col relative text-black min-h-screen">
             <header className='px-10 py-6 w-full border-b font-noto'>
                 <nav className='flex flex-row justify-between items-center'>
                     <Link className="font-bold" to="/"><h1>EdibleEasel<span className="text-[#9E1515]">.</span></h1></Link>
@@ -47,7 +48,7 @@ const App = () => {
             </header>
             <Routes>
                 <Route path='/' element={
-                <>
+                <div className='mb-28'>
                     <section className='pl-9 pr-9'>
                         <RandomMeal mealData={mealData[0]}/>
                     </section>
@@ -63,10 +64,10 @@ const App = () => {
                             }
                         </div>
                     </section>
-                </>
+                </div>
                 }/>
             </Routes>
-            <footer className="flex p-8 justify-center items-center border-t mt-28">
+            <footer className="flex p-8 justify-center items-center border-t mt-auto">
                 <p className="font-roboto">&copy; 2023 EdibleEasel</p>
             </footer>
         </main>
